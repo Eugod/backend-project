@@ -2,6 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 
+import charaterRoutes from './routes/characterRoutes.js';
+
 dotenv.config();
 
 const app = express();
@@ -20,6 +22,8 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => {
     res.send("Server is running");
 })
+
+app.use("/", charaterRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

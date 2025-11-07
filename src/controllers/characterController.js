@@ -1,4 +1,4 @@
-import { fetchFirstTwoCharacters } from "../services/characterService";
+import { fetchFirstTwoCharacters } from "../services/characterService.js";
 
 export async function getFirstTwoCharacters(req, res) {
     try {
